@@ -16,22 +16,22 @@ http://165.232.181.184:8502
 | Safety & Config | Role-based system prompts + safety classifier | Safe and beneficial AI deployment |
 
 ## Architecture
-User query
-│
-▼
-Safety classifier (Claude Haiku — fast, cheap)
-│
-▼
-RAG retrieval (ChromaDB + sentence-transformers)
-│
-▼
-Claude Sonnet — reasoning + answer generation
-│
-▼
-LLM-as-judge evaluator (Claude Haiku)
-│
-▼
-Logged to JSONL eval store
+[User query]
+|
+v
+[Safety classifier]  --  Claude Haiku (fast, cheap)
+|
+v
+[RAG retrieval]  --  ChromaDB + sentence-transformers
+|
+v
+[Answer generation]  --  Claude Sonnet
+|
+v
+[LLM-as-judge eval]  --  Claude Haiku
+|
+v
+[JSONL eval store]
 
 ## Key design decisions
 
@@ -39,7 +39,7 @@ Logged to JSONL eval store
 
 **Model routing** — Haiku for safety checks and evaluation (fast, cheap), Sonnet for reasoning and Q&A. Reduces API cost by ~70% vs using Sonnet everywhere.
 
-**ChromaDB for PoC, swappable for production** — local vector store with zero config. In a real enterprise deployment I would swap to Pinecone (AWS) or pgvector (Postgres-native) depending on the customer's cloud footprint.
+**ChromaDB for PoC, swappable for production** — local vector store with zero config. In a real enterprise deployment I would swap to Pinecone (AWS) or pgvector depending on the customer cloud footprint.
 
 **LLM-as-judge evaluation** — scales to any query volume without human reviewers. Every response scored on relevance, groundedness, completeness, and hallucination risk. Logged for trend analysis.
 
@@ -50,11 +50,10 @@ Logged to JSONL eval store
 - OAuth2 / SAML authentication
 - PostgreSQL for eval log storage and querying
 - Pinecone vector store for scale
-- Prompt caching for frequently-used system prompts (Anthropic feature)
+- Prompt caching for frequently-used system prompts
 - CI/CD pipeline with automated golden dataset eval on every deploy
 - Rate limiting per user
 - Audit log for all queries and responses
-- Grafana monitoring dashboard
 
 ## Running locally
 
@@ -70,15 +69,14 @@ streamlit run app.py
 ## Tech stack
 
 - Claude Sonnet + Haiku via Anthropic Python SDK
-- ChromaDB — vector store
-- sentence-transformers — embeddings (all-MiniLM-L6-v2)
-- Streamlit — UI
-- pandas — data handling
-- pdfplumber — PDF extraction
+- ChromaDB vector store
+- sentence-transformers embeddings (all-MiniLM-L6-v2)
+- Streamlit UI
+- pandas, pdfplumber
 - Deployed on DigitalOcean Ubuntu 24 VPS
 
 ## Author
 
-Hari Kumar — Senior Data & AI Architect  
-15+ years enterprise architecture across Harman, KPMG, PayPal, NTT Data  
+Hari Kumar — Senior Data & AI Architect
+15+ years enterprise architecture across Harman, KPMG, PayPal, NTT Data
 github.com/hnandhi
