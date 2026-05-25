@@ -16,22 +16,25 @@ http://165.232.181.184:8502
 | Safety & Config | Role-based system prompts + safety classifier | Safe and beneficial AI deployment |
 
 ## Architecture
+
+```
 [User query]
-|
-v
+     |
+     v
 [Safety classifier]  --  Claude Haiku (fast, cheap)
-|
-v
+     |
+     v
 [RAG retrieval]  --  ChromaDB + sentence-transformers
-|
-v
+     |
+     v
 [Answer generation]  --  Claude Sonnet
-|
-v
+     |
+     v
 [LLM-as-judge eval]  --  Claude Haiku
-|
-v
+     |
+     v
 [JSONL eval store]
+```
 
 ## Key design decisions
 
