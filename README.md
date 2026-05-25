@@ -16,7 +16,6 @@ http://165.232.181.184:8502
 | Safety & Config | Role-based system prompts + safety classifier | Safe and beneficial AI deployment |
 
 ## Architecture
-
 User query
 │
 ▼
