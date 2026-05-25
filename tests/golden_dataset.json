@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the approval threshold for purchase orders above 100000 USD?",
+    "expected_keywords": ["CFO", "CEO", "board"]
+  },
+  {
+    "question": "Who is responsible for vendor selection?",
+    "expected_keywords": ["procurement", "vendor"]
+  },
+  {
+    "question": "What are the standard payment terms?",
+    "expected_keywords": ["Net-30", "invoice"]
+  },
+  {
+    "question": "What happens if an employee has a conflict of interest with a vendor?",
+    "expected_keywords": ["disclose", "Ethics"]
+  },
+  {
+    "question": "How often are procurement activities audited?",
+    "expected_keywords": ["quarterly", "audit"]
+  }
+]
