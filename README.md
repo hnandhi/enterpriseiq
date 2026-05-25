@@ -1,7 +1,6 @@
 # EnterpriseIQ — Enterprise AI Platform built with Claude
 
-A production-ready Claude-powered platform demonstrating the 5 core
-patterns enterprise customers need when adopting LLMs.
+A production-ready Claude-powered platform demonstrating the 5 core patterns enterprise customers need when adopting LLMs.
 
 ## Live demo
 http://165.232.181.184:8502
@@ -35,26 +34,15 @@ LLM-as-judge evaluator (Claude Haiku)
 Logged to JSONL eval store
 ## Key design decisions
 
-- **Native Anthropic SDK over LangChain** — fewer abstractions, easier
-  debugging, full control over message structure. Critical for production
-  enterprise deployments where failure tracing matters.
+**Native Anthropic SDK over LangChain** — fewer abstractions, easier debugging, full control over message structure. Critical for production enterprise deployments where failure tracing matters.
 
-- **Model routing** — Haiku for safety checks and evaluation (fast, cheap),
-  Sonnet for reasoning and Q&A. Reduces API cost by ~70% vs using
-  Sonnet everywhere.
+**Model routing** — Haiku for safety checks and evaluation (fast, cheap), Sonnet for reasoning and Q&A. Reduces API cost by ~70% vs using Sonnet everywhere.
 
-- **ChromaDB for PoC, swappable for production** — local vector store
-  with zero config. In a real enterprise deployment I would swap to
-  Pinecone (AWS) or pgvector (Postgres-native) depending on the
-  customer's cloud footprint.
+**ChromaDB for PoC, swappable for production** — local vector store with zero config. In a real enterprise deployment I would swap to Pinecone (AWS) or pgvector (Postgres-native) depending on the customer's cloud footprint.
 
-- **LLM-as-judge evaluation** — scales to any query volume without
-  human reviewers. Every response scored on relevance, groundedness,
-  completeness, and hallucination risk. Logged for trend analysis.
+**LLM-as-judge evaluation** — scales to any query volume without human reviewers. Every response scored on relevance, groundedness, completeness, and hallucination risk. Logged for trend analysis.
 
-- **Role-based system prompts** — extends Anthropic's Constitutional AI
-  into customer-specific governance. Viewer, Analyst, Manager, Admin
-  roles each get different data access rules baked into the system prompt.
+**Role-based system prompts** — extends Anthropic's Constitutional AI into customer-specific governance. Viewer, Analyst, Manager, Admin roles each get different data access rules baked into the system prompt.
 
 ## What I would add for a real enterprise deployment
 
@@ -90,6 +78,6 @@ streamlit run app.py
 
 ## Author
 
-Hari Kumar — Senior Data & AI Architect
-15+ years enterprise architecture across Harman, KPMG, PayPal, NTT Data
+Hari Kumar — Senior Data & AI Architect  
+15+ years enterprise architecture across Harman, KPMG, PayPal, NTT Data  
 github.com/hnandhi
