@@ -16,6 +16,7 @@ http://165.232.181.184:8502
 | Safety & Config | Role-based system prompts + safety classifier | Safe and beneficial AI deployment |
 
 ## Architecture
+
 User query
 │
 ▼
@@ -32,6 +33,7 @@ LLM-as-judge evaluator (Claude Haiku)
 │
 ▼
 Logged to JSONL eval store
+
 ## Key design decisions
 
 **Native Anthropic SDK over LangChain** — fewer abstractions, easier debugging, full control over message structure. Critical for production enterprise deployments where failure tracing matters.
