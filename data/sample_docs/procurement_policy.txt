@@ -1,0 +1,40 @@
+ENTERPRISE PROCUREMENT POLICY
+Acme Corporation — Version 3.2 — January 2026
+
+1. PURPOSE
+This policy establishes procurement guidelines for all Acme Corporation employees.
+It ensures consistent, transparent, and cost-effective purchasing across all departments.
+
+2. APPROVAL THRESHOLDS
+All purchase orders must follow these approval requirements:
+- Up to 5,000 USD: Department manager approval required.
+- 5,001 to 25,000 USD: Senior manager and Finance sign-off required.
+- 25,001 to 100,000 USD: VP-level approval and Legal review required.
+- Above 100,000 USD: CFO and CEO approval mandatory. Board notification required.
+
+3. VENDOR SELECTION
+The Procurement team is responsible for vendor selection and onboarding.
+All new vendors must complete a due diligence assessment before engagement.
+Preferred vendors are listed in the Approved Vendor Registry maintained by Finance.
+Employees must not engage vendors outside the Approved Vendor Registry without prior written approval from the Chief Procurement Officer.
+
+4. PAYMENT TERMS
+Standard payment terms are Net-30 from invoice date.
+Early payment discounts must be approved by the Finance Controller.
+International vendor payments require additional compliance clearance from Legal.
+
+5. CONFLICT OF INTEREST
+Employees must disclose any personal or financial relationship with vendors.
+Failure to disclose conflicts of interest may result in disciplinary action.
+The Ethics Committee reviews all conflict disclosures within 10 business days.
+
+6. COMPLIANCE AND AUDIT
+All procurement activities are subject to quarterly internal audit.
+Non-compliance with this policy may result in purchase order cancellation.
+Repeat violations will be escalated to Human Resources and senior leadership.
+The Chief Compliance Officer publishes an annual procurement audit report.
+
+7. CONTACT
+For questions contact: procurement@acme.com
+Policy owner: Chief Procurement Officer
+Last reviewed: January 2026
